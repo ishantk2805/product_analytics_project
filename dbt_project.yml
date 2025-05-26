@@ -18,6 +18,11 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  jaffle_shop:
-    +materialized: table
+  staging:
+    jaffle_shop:
+      +materialized: table
+    stripe:
+      +materialized: table
+  marts:
+    +materialized: view
 
